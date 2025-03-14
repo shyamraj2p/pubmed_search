@@ -78,7 +78,7 @@ get-papers-list "COVID-19[Title] AND Nature[Journal]"
 - **ChatGPT**: Assisted in development and documentation improvements
 ### 🚀 Features
 
-Search for articles using PubMed's ESearch API
+**Search for articles using PubMed's ESearch API
 
 Retrieve detailed metadata using EFetch API
 

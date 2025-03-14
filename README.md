@@ -78,17 +78,17 @@ get-papers-list "COVID-19[Title] AND Nature[Journal]"
 - **ChatGPT**: Assisted in development and documentation improvements
 ### 🚀 Features
 
-**Search for articles using PubMed's ESearch API
+- Search for articles using PubMed's ESearch API
 
-Retrieve detailed metadata using EFetch API
+- Retrieve detailed metadata using EFetch API
 
-Save results as a CSV file
+- Save results as a CSV file
 
-Command-line interface for easy execution
+- Command-line interface for easy execution
 
-Rate-limit handling (avoids HTTP 429 errors)
+- Rate-limit handling (avoids HTTP 429 errors)
 
-Multi-threaded execution for faster processing
+- Multi-threaded execution for faster processing
 
 ## Updating Code on GitHub
 

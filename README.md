@@ -76,6 +76,19 @@ get-papers-list "COVID-19[Title] AND Nature[Journal]"
 - **Requests**: HTTP requests for PubMed API ([Docs](https://docs.python-requests.org/))
 - **argparse**: Command-line argument parsing ([Docs](https://docs.python.org/3/library/argparse.html))
 - **ChatGPT**: Assisted in development and documentation improvements
+### 🚀 Features
+
+Search for articles using PubMed's ESearch API
+
+Retrieve detailed metadata using EFetch API
+
+Save results as a CSV file
+
+Command-line interface for easy execution
+
+Rate-limit handling (avoids HTTP 429 errors)
+
+Multi-threaded execution for faster processing
 
 ## Updating Code on GitHub
 

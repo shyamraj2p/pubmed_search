@@ -75,7 +75,7 @@ get-papers-list "COVID-19[Title] AND Nature[Journal]"
 - **Poetry**: Dependency management ([Docs](https://python-poetry.org/))
 - **Requests**: HTTP requests for PubMed API ([Docs](https://docs.python-requests.org/))
 - **argparse**: Command-line argument parsing ([Docs](https://docs.python.org/3/library/argparse.html))
-- **ChatGPT**: Assisted in development and documentation improvements
+- **ChatGPT**: Assisted in development and documentation improvements([chat link](https://chatgpt.com/share/67d44043-872c-800d-b68d-a38026ddc4ab))
 ### 🚀 Features
 
 - Search for articles using PubMed's ESearch API

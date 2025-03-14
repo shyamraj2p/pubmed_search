@@ -1,79 +1,89 @@
 # PubMed Paper Fetcher
 
-## 📌 Overview
-This project allows users to fetch research papers from **PubMed** that contain company-affiliated authors. It retrieves paper details such as **title, publication date, author affiliations, and corresponding author emails**. The program supports command-line execution with options to **save results to a CSV file** and enable **debug mode**.
+## Overview
 
-## 📂 Code Organization
+This program fetches research papers from PubMed based on a given search query. It extracts details such as the title, publication date, non-academic authors, company affiliations, and corresponding author emails.
+
+## Project Structure
+
 ```
 ├── pubmed_fetcher.py      # Main script to fetch and process PubMed data
 ├── pyproject.toml         # Poetry configuration file
 ├── README.md              # Documentation
-└── requirements.txt       # Dependencies list (auto-managed by Poetry)
+├── requirements.txt       # Optional dependency list
 ```
 
-## 🔧 Installation & Setup
+## Installation
 
-### **1️⃣ Install Poetry**
-If you haven't installed Poetry, run:
-```bash
-pip install poetry
-```
+This project uses Poetry for dependency management. Ensure Poetry is installed on your system before proceeding.
 
-### **2️⃣ Clone the Repository**
-```bash
-git clone https://github.com/shyamraj2p/pubmed_search.git
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/your-username/pubmed_search.git
 cd pubmed_search
 ```
 
-### **3️⃣ Install Dependencies**
-Run the following command to install all required dependencies:
-```bash
+### 2️⃣ Install Dependencies
+
+```sh
 poetry install
 ```
 
-### **4️⃣ Activate the Virtual Environment**
-```bash
+### 3️⃣ Activate the Virtual Environment (Optional)
+
+```sh
 poetry shell
 ```
 
-## 🚀 Execution
+## Execution
 
-### **Run the Program with a Query**
-```bash
-python pubmed_fetcher.py "COVID-19[Title] AND Nature[Journal]"
+### Running the Script Manually
+
+```sh
+poetry run python pubmed_fetcher.py "COVID-19[Title] AND Nature[Journal]"
 ```
 
-### **Enable Debug Mode**
-```bash
-python pubmed_fetcher.py "COVID-19[Title]" -d
+### Running via Executable Command (Recommended)
+
+The project provides an executable command `get-papers-list` via Poetry.
+
+#### 🔹 Run the Program
+
+Using Poetry directly:
+
+```sh
+poetry run get-papers-list "COVID-19[Title] AND Nature[Journal]"
 ```
 
-### **Save Results to CSV**
-```bash
-python pubmed_fetcher.py "COVID-19[Title]" -f results.csv
+If inside the Poetry shell:
+
+```sh
+get-papers-list "COVID-19[Title] AND Nature[Journal]"
 ```
 
-### **Display Help Message**
-```bash
-python pubmed_fetcher.py -h
+## Command-line Options
+
+| Option        | Description                                    |
+| ------------- | ---------------------------------------------- |
+| `-h, --help`  | Display usage instructions                     |
+| `-d, --debug` | Print debug information during execution       |
+| `-f, --file`  | Save results to a CSV file instead of printing |
+
+## Tools and Dependencies
+
+- **Poetry**: Dependency management ([Docs](https://python-poetry.org/))
+- **Requests**: HTTP requests for PubMed API ([Docs](https://docs.python-requests.org/))
+- **argparse**: Command-line argument parsing ([Docs](https://docs.python.org/3/library/argparse.html))
+- **ChatGPT**: Assisted in development and documentation improvements
+
+## Updating Code on GitHub
+
+To push changes to GitHub:
+
+```sh
+git add .
+git commit -m "Updated README with get-papers-list details"
+git push origin main
 ```
-
-## 🛠️ Tools & Libraries Used
-- **Requests** ([docs](https://docs.python-requests.org/en/latest/)): Fetches data from the PubMed API.
-- **argparse** ([docs](https://docs.python.org/3/library/argparse.html)): Handles command-line arguments.
-- **XML.etree.ElementTree** ([docs](https://docs.python.org/3/library/xml.etree.elementtree.html)): Parses PubMed XML responses.
-- **CSV Module** ([docs](https://docs.python.org/3/library/csv.html)): Saves output in CSV format.
-- **ThreadPoolExecutor** ([docs](https://docs.python.org/3/library/concurrent.futures.html)): Enables multithreading to fetch paper details efficiently.
-
-## 📌 Notes
-- The script **automatically handles API rate limits** by implementing exponential backoff.
-- Company-affiliated authors are identified using keywords like **pharma, biotech, corp, gmbh, medtech, etc.**
-- Email extraction is based on a regex pattern matching common email formats.
-
-## 🤝 Contribution
-Feel free to fork this repository, raise issues, or submit pull requests to improve the functionality!
-
----
-
-📧 **Contact:** If you have any questions, reach out at [your email or GitHub issues].
 

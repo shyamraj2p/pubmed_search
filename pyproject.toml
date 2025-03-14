@@ -1,5 +1,5 @@
 [project]
-name = "aganith-assement"
+name = "pubmed_fetcher"
 version = "0.1.0"
 description = ""
 authors = [
@@ -12,8 +12,12 @@ dependencies = [
     "pandas (>=2.2.3,<3.0.0)",
     "numpy (>=2.2.3,<3.0.0)"
 ]
+packages = [{ include = "pubmed_fetcher" }]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher:main"

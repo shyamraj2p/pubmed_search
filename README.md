@@ -90,6 +90,9 @@ get-papers-list "COVID-19[Title] AND Nature[Journal]"
 
 - Multi-threaded execution for faster processing
 
+  ### Result
+![image](https://github.com/user-attachments/assets/184fffa6-30d1-4fae-8e0b-267f7c9e26c7)
+
 ## Updating Code on GitHub
 
 To push changes to GitHub:
